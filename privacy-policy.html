@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for the QA AI Assistant Chrome Extension. Learn how your data is kept secure and stored locally in your browser.">
+    <title>Privacy Policy - QA AI Assistant</title>
+    <style>
+        /* Modern CSS Variables for Design System */
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --primary-light: #e0e7ff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+            --radius-sm: 6px;
+        }
+
+        /* Base Resets & Typography */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 48px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Header Style */
+        header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        /* SVG Logo Representation */
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        h1 {
+            font-size: 28px;
+            color: var(--text-main);
+            font-weight: 800;
+            letter-spacing: -0.025em;
+        }
+
+        .meta-info {
+            font-size: 14px;
+            color: var(--text-muted);
+            display: flex;
+            gap: 16px;
+        }
+
+        /* Section Headings */
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 36px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.015em;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 16px;
+            color: #334155;
+        }
+
+        /* Custom Lists */
+        ul {
+            list-style-type: none;
+            margin-bottom: 24px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: #334155;
+        }
+
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 6px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Permission & Highlight Blocks */
+        .permission-card {
+            background-color: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .permission-name {
+            font-family: monospace;
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--primary);
+            background-color: var(--primary-light);
+            padding: 3px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .permission-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .highlight-box {
+            background: linear-gradient(180deg, #fcfdff 0%, #f5f8ff 100%);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 24px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 500;
+            color: #312e81;
+        }
+
+        /* Contact Details & Links */
+        .contact-card {
+            background-color: #fafafa;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 24px;
+            margin-top: 32px;
+            text-align: center;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white !important;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            margin-top: 12px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 48px;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 640px) {
+            body {
+                padding: 20px 10px;
+            }
+            .container {
+                padding: 24px;
+                border-radius: var(--radius-sm);
+            }
+            h1 {
+                font-size: 22px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo-area">
+            <div class="logo-icon">QA</div>
+            <h1>QA AI Assistant</h1>
+        </div>
+        <div class="meta-info">
+            <span>Privacy Policy</span>
+            <span>•</span>
+            <span>Last Updated: July 3, 2026</span>
+        </div>
+    </header>
+
+    <p>This Privacy Policy describes how the <strong>QA AI Assistant</strong> Chrome Extension ("we", "our", "us", or "the extension") handles and protects user data. We are committed to ensuring your privacy and protecting the security of your test data and credentials. We strictly adhere to a policy of no user tracking, no selling of user data, no advertising, and no analytics.</p>
+
+    <div class="highlight-box">
+        <p>No Developer Servers, No Tracking, and No Advertising: We do not operate developer-owned servers, run analytics, show ads, or track your behavior. All configurations and captured data remain stored locally in your browser under your absolute control, except when you intentionally and directly communicate with your configured AI providers or Jira via secure HTTPS.</p>
+    </div>
+
+    <h2>1. Data We Collect</h2>
+    <p>To perform its functions as a QA helper and test-case generation utility, the extension processes and saves the following types of information:</p>
+    <ul>
+        <li><strong>API Keys &amp; Configuration:</strong> API keys for AI models (e.g., OpenAI, Anthropic, Gemini, Groq, DeepSeek, etc.) that you configure.</li>
+        <li><strong>Jira Credentials:</strong> Your target Jira domain, account email, and Jira API token to allow logging bugs and creating issues directly from the extension.</li>
+        <li><strong>Bug Descriptions &amp; Test Cases:</strong> Draft bug reports, test scripts, and scenarios entered or selected by you for AI-powered processing.</li>
+        <li><strong>Browser Recordings &amp; Assets:</strong> Screenshots and video capture recordings generated during your QA testing flow to document bugs.</li>
+    </ul>
+
+    <h2>2. How Data is Stored</h2>
+    <p>We respect the integrity of your local system environment. The extension handles storage according to these principles:</p>
+    <ul>
+        <li><strong>Local Storage Only:</strong> All configurations, API keys, credentials, and recording metadata are saved locally within the user's browser profile.</li>
+        <li><strong>Chrome Storage API (Local):</strong> We utilize the <code>chrome.storage.local</code> API to store configurations and credentials, which ensures data is kept on your machine and is <strong>not</strong> synced to Google's cloud servers.</li>
+        <li><strong>Session Storage (Temporary):</strong> Temporary recording state and active session parameters are stored using the <code>chrome.storage.session</code> API. This data is strictly temporary, kept only in memory, and cleared automatically when the browser session ends or the extension is closed.</li>
+        <li><strong>No Extension Servers:</strong> We do not host or operate any backend servers. No data collected by this extension is ever stored, analyzed, or received by us.</li>
+    </ul>
+
+    <h2>3. Data Transmission</h2>
+    <p>All communication with external services occurs directly from your browser. There are no developer-owned servers, and no analytics or tracking servers are used. Communication occurs only when you explicitly perform an action (e.g., requesting AI analysis or logging a bug). All network communication is conducted securely over HTTPS.</p>
+    <p>The extension transmits data ONLY to the following user-configured endpoints depending on the services you enable:</p>
+    <ul>
+        <li><strong>Jira Cloud &amp; Test Management Integration:</strong>
+            <ul>
+                <li><code>https://*.atlassian.net/*</code> (direct communication with your Jira Cloud instance to manage issues)</li>
+                <li><code>https://tcms.aiojiraapps.com/*</code> (direct communication to manage test cases via Jira-compatible plugins)</li>
+            </ul>
+        </li>
+        <li><strong>User-Configured AI Service Providers:</strong>
+            <ul>
+                <li>OpenAI (<code>https://api.openai.com/*</code>)</li>
+                <li>Anthropic (<code>https://api.anthropic.com/*</code>)</li>
+                <li>Google Gemini (<code>https://generativelanguage.googleapis.com/*</code>)</li>
+                <li>Groq (<code>https://api.groq.com/*</code>)</li>
+                <li>DeepSeek (<code>https://api.deepseek.com/*</code>)</li>
+                <li>Zhipu GLM (<code>https://open.bigmodel.cn/*</code>)</li>
+                <li>Hugging Face (<code>https://router.huggingface.co/*</code>)</li>
+                <li>OpenRouter (<code>https://openrouter.ai/*</code>)</li>
+                <li>EcomAgent (<code>https://api.ecomagent.in/*</code>)</li>
+            </ul>
+        </li>
+    </ul>
+    <p>These external integrations are entirely configured by the user, and credentials/keys are transmitted directly to the respective endpoints without passing through any third party or developer servers.</p>
+
+    <h2>4. Required Permissions &amp; Justifications</h2>
+    <p>The extension requests specific browser permissions in <code>manifest.json</code> to perform its testing and automation features. Below are the details and justifications for each key permission:</p>
+
+    <div class="permission-card">
+        <span class="permission-name">&lt;all_urls&gt; / Content Scripts</span>
+        <p class="permission-desc">The extension is designed for software testing and may operate on any website selected by the user. Content scripts are injected only when required for QA features, allowing the QA Test Data helper to appear on target websites, inspect inputs, and autofill test data.</p>
+    </div>
+
+    <div class="permission-card">
+        <span class="permission-name">tabCapture</span>
+        <p class="permission-desc">Required to record the active browser tab's screen and audio when you initiate a bug capture/recording session.</p>
+    </div>
+
+    <div class="permission-card">
+        <span class="permission-name">downloads</span>
+        <p class="permission-desc">Required to download generated bug recordings, screenshots, and export files directly onto your local machine.</p>
+    </div>
+
+    <div class="permission-card">
+        <span class="permission-name">scripting</span>
+        <p class="permission-desc">Required to inject the interactive recording toolbar and page-helper styles into web pages you are actively testing.</p>
+    </div>
+
+    <div class="permission-card">
+        <span class="permission-name">storage</span>
+        <p class="permission-desc">Required to save your configured API keys, AI model preferences, Jira credentials, and active recording configurations locally.</p>
+    </div>
+
+    <div class="permission-card">
+        <span class="permission-name">activeTab</span>
+        <p class="permission-desc">Required to temporarily access the currently active tab when you trigger extension features via the popup or context menu, enabling target style injections and QA data entry helpers without requesting permanent wide access.</p>
+    </div>
+
+    <div class="permission-card">
+        <span class="permission-name">tabs</span>
+        <p class="permission-desc">Required to inspect tab details (such as current URL and title) to create context-aware prompts for test-case generation and ensure the extension's QA tools are mapped to the correct tab.</p>
+    </div>
+
+    <div class="permission-card">
+        <span class="permission-name">offscreen</span>
+        <p class="permission-desc">Required to spawn offscreen documents for processing and encoding media recordings in the background without interrupting the user experience or blocking main service worker threads.</p>
+    </div>
+
+    <div class="permission-card">
+        <span class="permission-name">notifications</span>
+        <p class="permission-desc">Required to show desktop notifications informing you when a test case generation is complete, a bug report is successfully logged to Jira, or when a recording has finished exporting.</p>
+    </div>
+
+    <h2>5. User Rights &amp; Control</h2>
+    <p>You maintain full ownership and control over your data. You can manage or delete your stored data at any time:</p>
+    <ul>
+        <li><strong>Clearing Settings:</strong> You can clear your API keys or disconnect Jira credentials at any time directly through the extension's Options page.</li>
+        <li><strong>Complete Erasure:</strong> Uninstalling the QA AI Assistant extension from Chrome immediately and permanently removes all stored data, API keys, and settings from your browser profile.</li>
+    </ul>
+
+    <h2>6. Contact Developer</h2>
+    <p>If you have any questions or feedback regarding this Privacy Policy or the security of the QA AI Assistant Chrome Extension, please contact the developer:</p>
+    
+    <div class="contact-card">
+        <p>Developer Contact Email:</p>
+        <a href="mailto:salahqc0@gmail.com" class="contact-btn">salahqc0@gmail.com</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 QA AI Assistant. All rights reserved.</p>
+        <p>Suitable for Chrome Web Store hosting and GitHub Pages.</p>
+    </footer>
+</div>
+
+</body>
+</html>
