@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for the QA AI Assistant Chrome Extension. Learn how your data is kept secure and stored locally in your browser.">
-    <title>Privacy Policy - QA AI Assistant</title>
+    <meta name="description" content="Privacy Policy for the SquadFlow Chrome Extension. Learn how your data is kept secure and stored locally in your browser.">
+    <title>Privacy Policy - SquadFlow</title>
     <style>
         /* Modern CSS Variables for Design System */
         :root {
@@ -243,16 +243,16 @@
     <header>
         <div class="logo-area">
             <div class="logo-icon">QA</div>
-            <h1>QA AI Assistant</h1>
+            <h1>SquadFlow</h1>
         </div>
         <div class="meta-info">
             <span>Privacy Policy</span>
             <span>•</span>
-            <span>Last Updated: July 3, 2026</span>
+            <span>Last Updated: October 7, 2026</span>
         </div>
     </header>
 
-    <p>This Privacy Policy describes how the <strong>QA AI Assistant</strong> Chrome Extension ("we", "our", "us", or "the extension") handles and protects user data. We are committed to ensuring your privacy and protecting the security of your test data and credentials. We strictly adhere to a policy of no user tracking, no selling of user data, no advertising, and no analytics.</p>
+    <p>This Privacy Policy describes how the <strong>SquadFlow</strong> Chrome Extension ("we", "our", "us", or "the extension") handles and protects user data. We are committed to ensuring your privacy and protecting the security of your test data and credentials. We strictly adhere to a policy of no user tracking, no selling of user data, no advertising, and no analytics.</p>
 
     <div class="highlight-box">
         <p>No Developer Servers, No Tracking, and No Advertising: We do not operate developer-owned servers, run analytics, show ads, or track your behavior. All configurations and captured data remain stored locally in your browser under your absolute control, except when you intentionally and directly communicate with your configured AI providers or Jira via secure HTTPS.</p>
@@ -264,7 +264,7 @@
         <li><strong>API Keys &amp; Configuration:</strong> API keys for AI models (e.g., OpenAI, Anthropic, Gemini, Groq, DeepSeek, etc.) that you configure.</li>
         <li><strong>Jira Credentials:</strong> Your target Jira domain, account email, and Jira API token to allow logging bugs and creating issues directly from the extension.</li>
         <li><strong>Bug Descriptions &amp; Test Cases:</strong> Draft bug reports, test scripts, and scenarios entered or selected by you for AI-powered processing.</li>
-        <li><strong>Browser Recordings &amp; Assets:</strong> Screenshots and video capture recordings generated during your QA testing flow to document bugs.</li>
+        <li><strong>Browser Recordings &amp; Assets:</strong> Screenshots and video recordings you start during your QA testing flow to document bugs. Capture only begins after you choose a browser window or screen in your browser's own sharing picker, and stops when you press Stop or the browser's "Stop sharing" button. Recordings are saved to your computer and are only sent anywhere (e.g. attached to a Jira issue) when you choose to.</li>
     </ul>
 
     <h2>2. How Data is Stored</h2>
@@ -311,11 +311,6 @@
     </div>
 
     <div class="permission-card">
-        <span class="permission-name">tabCapture</span>
-        <p class="permission-desc">Required to record the active browser tab's screen and audio when you initiate a bug capture/recording session.</p>
-    </div>
-
-    <div class="permission-card">
         <span class="permission-name">downloads</span>
         <p class="permission-desc">Required to download generated bug recordings, screenshots, and export files directly onto your local machine.</p>
     </div>
@@ -335,14 +330,10 @@
         <p class="permission-desc">Required to temporarily access the currently active tab when you trigger extension features via the popup or context menu, enabling target style injections and QA data entry helpers without requesting permanent wide access.</p>
     </div>
 
-    <div class="permission-card">
-        <span class="permission-name">tabs</span>
-        <p class="permission-desc">Required to inspect tab details (such as current URL and title) to create context-aware prompts for test-case generation and ensure the extension's QA tools are mapped to the correct tab.</p>
-    </div>
 
     <div class="permission-card">
         <span class="permission-name">offscreen</span>
-        <p class="permission-desc">Required to spawn offscreen documents for processing and encoding media recordings in the background without interrupting the user experience or blocking main service worker threads.</p>
+        <p class="permission-desc">Hosts the screenshot and bug-recording session when you start one, and encodes recordings without blocking the background service worker. The browser's own picker asks you which window or screen to share (this is how the DevTools panel can be included); nothing is captured without that choice, and files are saved only to your computer.</p>
     </div>
 
     <div class="permission-card">
@@ -350,15 +341,20 @@
         <p class="permission-desc">Required to show desktop notifications informing you when a test case generation is complete, a bug report is successfully logged to Jira, or when a recording has finished exporting.</p>
     </div>
 
+    <div class="permission-card">
+        <span class="permission-name">alarms</span>
+        <p class="permission-desc">Required for the built-in Pomodoro focus timer, so it can notify you when a session ends even while the popup is closed. No data is collected or sent.</p>
+    </div>
+
     <h2>5. User Rights &amp; Control</h2>
     <p>You maintain full ownership and control over your data. You can manage or delete your stored data at any time:</p>
     <ul>
         <li><strong>Clearing Settings:</strong> You can clear your API keys or disconnect Jira credentials at any time directly through the extension's Options page.</li>
-        <li><strong>Complete Erasure:</strong> Uninstalling the QA AI Assistant extension from Chrome immediately and permanently removes all stored data, API keys, and settings from your browser profile.</li>
+        <li><strong>Complete Erasure:</strong> Uninstalling the SquadFlow extension from Chrome immediately and permanently removes all stored data, API keys, and settings from your browser profile.</li>
     </ul>
 
     <h2>6. Contact Developer</h2>
-    <p>If you have any questions or feedback regarding this Privacy Policy or the security of the QA AI Assistant Chrome Extension, please contact the developer:</p>
+    <p>If you have any questions or feedback regarding this Privacy Policy or the security of the SquadFlow Chrome Extension, please contact the developer:</p>
     
     <div class="contact-card">
         <p>Developer Contact Email:</p>
@@ -366,7 +362,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 QA AI Assistant. All rights reserved.</p>
+        <p>&copy; 2026 SquadFlow. All rights reserved.</p>
         <p>Suitable for Chrome Web Store hosting and GitHub Pages.</p>
     </footer>
 </div>
